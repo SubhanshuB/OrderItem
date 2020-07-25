@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: orderitem
-        image: containerregistrynaam.azurecr.io/kubrepos:latest
+        image: regnaam.azurecr.io/orderrepos:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
