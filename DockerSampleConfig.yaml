@@ -14,11 +14,11 @@ spec:
     spec:
       containers:
       - name: orderitem
-        image: regnaam.azurecr.io/orderrepos:latest
+        image: registrynaam.azurecr.io/orepos:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
-      - name: orderitemsn
+      - name: oitemsn
 
 ---
 apiVersion: v1
