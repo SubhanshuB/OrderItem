@@ -38,7 +38,8 @@ namespace OrderItem.Controllers
         [HttpPost("{menuItemid}")]
         public Cart Post(int menuItemid)
         {
-            string token=GetToken("http://20.189.115.240/api/token");
+            //string token=GetToken("https://localhost:44324/api/token");
+            string token=GetToken("https://mitem.azurewebsites.net/api/token");
             var cart =new Cart()
             {
                 Id = 1,
@@ -54,7 +55,8 @@ namespace OrderItem.Controllers
             string name;
             using (var client=new HttpClient())
             {
-                client.BaseAddress=new Uri("http://20.189.115.240/");
+                //client.BaseAddress=new Uri("https://localhost:44324/");
+                client.BaseAddress=new Uri("https://mitem.azurewebsites.net/");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/string"));
